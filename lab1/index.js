@@ -1,8 +1,6 @@
-const Tyler = require("./Dan.js");
+var chalk = require('chalk');
+const Tyler = require("./Tyler.js");
 
-let p = new Dan("Dan", "Green");
+let tyler = new Tyler('Tyler', 'MaGeNtA');
 
-console.log(p.color);
-
-
-
+tyler.speak();
