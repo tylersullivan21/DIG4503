@@ -1,3 +1,4 @@
+const Chalk = require("chalk");
 class Person {
 constructor(name, favoriteColor){
     this.name = name;
@@ -5,7 +6,8 @@ constructor(name, favoriteColor){
 }
 
 speak(){
-    console.log(chalk.favoriteColor(this.name));
+    //My first idea.//
+    console.log(Chalk.keyword(this.favoriteColor)(this.name));
 }
 
 
