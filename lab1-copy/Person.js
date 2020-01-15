@@ -1,4 +1,3 @@
-var chalk = require('chalk');
 class Person {
 constructor(name, favoriteColor){
     this.name = name;
