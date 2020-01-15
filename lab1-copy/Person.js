@@ -6,8 +6,10 @@ constructor(name, favoriteColor){
 }
 
 speak(){
-    console.log(this.name)
+    console.log(chalk.favoriteColor(this.name))
 }
 
 
 }
+
+module.exports = Person
