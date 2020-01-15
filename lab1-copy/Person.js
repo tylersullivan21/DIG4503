@@ -7,7 +7,7 @@ constructor(name, favoriteColor){
 
 speak(){
     //My first idea.//
-    console.log(Chalk.keyword(this.favoriteColor)(this.name));
+    console.log(Chalk.keyword(this.favoriteColor.toLowerCase())(this.name));
 }
 
 
