@@ -5,7 +5,7 @@ constructor(name, favoriteColor){
 }
 
 speak(){
-    console.log(chalk.favoriteColor(this.name))
+    console.log(chalk.favoriteColor(this.name));
 }
 
 
