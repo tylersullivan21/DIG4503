@@ -1,8 +1,8 @@
-const require = ("./Person.js");
+const Person = require("./Person.js");
 
 class Tyler extends Person{
 
-constructor(){
+constructor(name,favoriteColor){
     super(name, favoriteColor);
 }
 

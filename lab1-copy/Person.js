@@ -12,4 +12,4 @@ speak(){
 
 }
 
-module.exports = Person
+module.exports = Person;

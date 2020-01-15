@@ -1,4 +1,4 @@
-var chalk = require('chalk');
-const require = ("./Tyler.js");
 
-let me = new Person('Tyler', 'Pink');
+const Tyler = require("./Tyler.js");
+
+let ty = new Person('Tyler', 'Pink');
