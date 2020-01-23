@@ -4,7 +4,7 @@ class HomePage extends React.Component{
 render(){
 return(
 
-<h1>Hello there I am , {this.props.firstName}</h1>
+<h1>Greeting, I am {this.props.firstName}</h1>
 
 
 );
