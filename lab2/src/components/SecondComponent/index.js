@@ -6,7 +6,7 @@ render(){
 
 return(
 
-<h4>This is the second component that I am testing here, isnt this {this.props.adjective}</h4>
+<h4>Components take care of {this.props.tagline1}</h4>
 
 
 );
