@@ -13,7 +13,7 @@ App.use("/public", Express.static("public"));
 
 
 
-App.listen(port, function(){
+App.listen(port, () => {
 
 console.log("Server is running!");
 
