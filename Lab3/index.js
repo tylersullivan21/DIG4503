@@ -2,13 +2,16 @@ const Express = require("express");
 const App = Express();
 const port = 80;
 
-App.use(Express.static("static"));
 
-/*
 App.get('/', function(request,response){
-    response.send("This is testing here");
+    response.send("Hello World!");
 })
-*/
+
+
+App.use("/public", Express.static("public"));
+
+
+
 
 App.listen(port, function(){
 
