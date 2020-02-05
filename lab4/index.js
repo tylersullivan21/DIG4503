@@ -2,7 +2,6 @@ const Express = require("express");
 const App = Express();
 const port = 8080;
 const Pokemon = require("./Pokemon");
-const faker = require("faker");
 
 let pokemon = [];
 
