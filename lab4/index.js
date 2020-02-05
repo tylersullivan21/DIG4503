@@ -18,7 +18,7 @@ for(let i=0;i<99;i++){
 
 App.get("/person/name/:name", (req, res) => {
 
-    let result = "Invalid";
+    let result = {"error": "couldnt find"};
     people.forEach((value) => {
         if(value.name == req.params.name){
             res.send(value);
@@ -31,9 +31,17 @@ App.get("/person/color/:color", (req, res) => {
     let result = "Invalid";
     people.forEach((value) => {
         if(value.color == req.params.color){
+            console.log(req.path);
             res.send(value);
         }
     });
+
+    if(result.error){
+        console.log(req.path);
+    }
+    else{
+        console.log(req.path);
+    }
     res.send(result);
 });
 
