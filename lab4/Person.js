@@ -1,7 +1,7 @@
 class Person {
-    constructor(id, name){
-        this.id = id;
+    constructor(name, color) {
         this.name = name;
+        this.color = color;
     }
 }
 

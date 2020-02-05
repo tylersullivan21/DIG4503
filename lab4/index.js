@@ -1,13 +1,22 @@
 const Express = require("express");
 const App = Express();
-const port = 8080;
-const Pokemon = require("./Pokemon");
+const port = 80;
 
-let pokemon = [];
+const Person = require("./Person.js");
+const faker = require('faker');
 
-App.get("/pokemon/id/:id", (req, res) => {
-    pokemon.forEach((value)=> {
-        if(value.name == req.params.id) {
+let people = [];
+
+for(let i = 0; i < 99; i++)
+{
+    let name = faker.name.findName();
+    let color = faker.commerce.color();
+    people.push(new Person(name, color));
+}
+
+App.get("/people/name/:name", (req, res) => {
+    people.forEach((value)=> {
+        if(value.name == req.params.name) {
             res.send(value);
         }
     });
@@ -16,19 +25,18 @@ App.get("/pokemon/id/:id", (req, res) => {
 
 });
 
-
-
-App.get("/pokemon/name/:name", (req, res) => {
-    pokemon.forEach((value)=> {
-        if(value.color == req.params.name) {
+App.get("/people/color/:color", (req, res) => {
+    people.forEach((value)=> {
+        if(value.color == req.params.color) {
+            console.log(req.path);
             res.send(value);
         }
     });
-
+    console.log(req.path);
     res.send("Invalid!");
 
 });
 
-App.listen(port,() => {
-    console.log("Server is running");
-})
+App.listen(port, () => {
+    console.log("Server running!");
+});
