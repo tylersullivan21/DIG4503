@@ -4,8 +4,10 @@ const port = 8080;
 const Pokemon = require("./Pokemon");
 const faker = require("faker");
 
+let pokemon = [];
+
 App.get("/pokemon/id/:id", (req, res) => {
-    people.forEach((value)=> {
+    pokemon.forEach((value)=> {
         if(value.name == req.params.id) {
             res.send(value);
         }
@@ -18,7 +20,7 @@ App.get("/pokemon/id/:id", (req, res) => {
 
 
 App.get("/pokemon/name/:name", (req, res) => {
-    people.forEach((value)=> {
+    pokemon.forEach((value)=> {
         if(value.color == req.params.name) {
             res.send(value);
         }
