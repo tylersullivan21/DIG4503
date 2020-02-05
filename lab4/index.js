@@ -1,7 +1,7 @@
 const Express = require("express");
 const App = Express();
 const port = 8080;
-const Person = require("./Person");
+const Person = require("./Pokemon");
 const faker = require("faker");
 
 App.get('/', function(request,response){
