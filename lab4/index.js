@@ -14,24 +14,27 @@ for(let i=0;i<99;i++){
     people.push(new Person(name, color));
 }
 
-//console.log(people[10]);
+
 
 App.get("/person/name/:name", (req, res) => {
+
+    let result = "Invalid";
     people.forEach((value) => {
         if(value.name == req.params.name){
             res.send(value);
         }
     });
-    res.send("Nothing found that matches that. :'(")
+    res.send(result)
 });
 
 App.get("/person/color/:color", (req, res) => {
+    let result = "Invalid";
     people.forEach((value) => {
         if(value.color == req.params.color){
             res.send(value);
         }
     });
-    res.send("Nothing found that matches that. :'(")
+    res.send(result);
 });
 
 App.listen(port, () =>{
