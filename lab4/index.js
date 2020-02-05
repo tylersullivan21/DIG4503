@@ -1,42 +1,39 @@
-const Express = require("express");
+const Express = require('express');
 const App = Express();
 const port = 80;
 
 const Person = require("./Person.js");
-const faker = require('faker');
-
+let p = new Person("Connor", "blue");
 let people = [];
 
-for(let i = 0; i < 99; i++)
-{
+const faker = require('faker');
+
+for(let i=0;i<99;i++){
     let name = faker.name.findName();
     let color = faker.commerce.color();
     people.push(new Person(name, color));
 }
 
-App.get("/people/name/:name", (req, res) => {
-    people.forEach((value)=> {
-        if(value.name == req.params.name) {
+//console.log(people[10]);
+
+App.get("/person/name/:name", (req, res) => {
+    people.forEach((value) => {
+        if(value.name == req.params.name){
             res.send(value);
         }
     });
-
-    res.send("Invalid!");
-
+    res.send("Nothing found that matches that. :'(")
 });
 
-App.get("/people/color/:color", (req, res) => {
-    people.forEach((value)=> {
-        if(value.color == req.params.color) {
-            console.log(req.path);
+App.get("/person/color/:color", (req, res) => {
+    people.forEach((value) => {
+        if(value.color == req.params.color){
             res.send(value);
         }
     });
-    console.log(req.path);
-    res.send("Invalid!");
-
+    res.send("Nothing found that matches that. :'(")
 });
 
-App.listen(port, () => {
-    console.log("Server running!");
+App.listen(port, () =>{
+    console.log("Server Running!");
 });
