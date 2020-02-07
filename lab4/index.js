@@ -11,10 +11,9 @@ const port = 80;
 
 
 App.get("/name/:name", (req,res)=>{
-     
-let userInput = req.params.name;
- 
-let pokeObj = getPokemons.getPokemonByName(pokemonName);
+      
+    let userInput = req.params.name;
+let pokeObj = getPokemons.getPokemonByName(userInput);
     //console.log(result);
 
     if (pokeObj){
@@ -27,6 +26,8 @@ let pokeObj = getPokemons.getPokemonByName(pokemonName);
     }
     return result;
 });
+
+/*
 
 App.get("/id/:id", (req, res)=>{
     
@@ -50,6 +51,7 @@ App.get("/id/:id", (req, res)=>{
     }
     return result;
 }); 
+*/
 App.listen(port, () =>{
     console.log("Server Running!");
 });
