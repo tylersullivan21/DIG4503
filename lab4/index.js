@@ -48,7 +48,7 @@ function capitalizeFirstLetter(string){
     let pName = capitalizeFirstLetter(userInput);
     let pokeObj = getPokemons.getPokemonByName(pName);
     
-    /* checking to see if the name response from the json-pokemon object is null or not*/
+    /* checking to see if the name response from the json-pokemon object matches or not*/
     if (pokeObj){
         res.send(pokeObj)
         console.log(chalk.green(req.path));
