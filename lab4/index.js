@@ -7,28 +7,9 @@ const App = Express();
 const port = 80;
 
 
-/*********************************/
-/*Code to search Pokemon by name*/
-/*********************************/
-App.get("/name/:name", (req,res)=>{
-      
-    let userInput = req.params.name;
-let pokeObj = getPokemons.getPokemonByName(userInput);
-    //console.log(result);
-
-    if (pokeObj){
-        res.send(pokeObj)
-        console.log(chalk.green(req.path));
-    }
-    else{
-       res.send("That is not a valid name of a pokemon");
-        // console.log(result);
-    }
-});
-
 
 /*********************************/
-/*Code to search Pokemon by name*/
+/*Code to search Pokemon by ID*/
 /*********************************/
 
 
@@ -48,6 +29,43 @@ App.get("/id/:id", (req, res)=>{
     
 }); 
 
+/*********************************/
+/*Code to search Pokemon by ID*/
+/*********************************/
+
+
+
+
+/*********************************/
+/*Code to search Pokemon by name*/
+/*********************************/
+App.get("/name/:name", (req,res)=>{
+      /*Build function that will change user input to capital first letter so will work with library*/
+function capitalizeFirstLetter(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
+} 
+    let userInput = req.params.name;
+    let pName = capitalizeFirstLetter(userInput);
+    let pokeObj = getPokemons.getPokemonByName(pName);
+    
+    if (pokeObj){
+        res.send(pokeObj)
+        console.log(chalk.green(req.path));
+    }
+    else{
+       res.send("That is not a valid name of a pokemon");
+       console.log(chalk.red("Thats not a valid name for a Pokemon."));
+
+    }
+});
+
+
+/*********************************/
+/*Code to search Pokemon by name*/
+/*********************************/
+
+
+
 App.listen(port, () =>{
-    console.log("Server Running!");
+    console.log("Server is running, Gotta Catch em all Prof Cox!");
 });
