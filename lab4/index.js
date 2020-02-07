@@ -24,7 +24,6 @@ let pokeObj = getPokemons.getPokemonByName(userInput);
        res.send("That is not a valid name of a pokemon");
         // console.log(result);
     }
-    return result;
 });
 
 
@@ -46,7 +45,7 @@ App.get("/id/:id", (req, res)=>{
      res.send("That is not a valid ID of a pokemon.");
      console.log(chalk.red("That is not a valid ID of a pokemon"));
     }
-    return result;
+    
 }); 
 
 App.listen(port, () =>{
