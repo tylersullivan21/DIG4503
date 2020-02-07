@@ -14,7 +14,8 @@ const port = 80;
 
 
 App.get("/id/:id", (req, res)=>{
-    /* Use number() found in json-pokemon doccumentation*/
+    /* Use number() found in json-pokemon doccumentation
+    number function changes string to number*/
     let id = req.params.id
     pokeObj = getPokemons.getPokemonById(Number(id));
 
@@ -35,14 +36,13 @@ App.get("/id/:id", (req, res)=>{
 
 
 
-
 /*********************************/
 /*Code to search Pokemon by name*/
 /*********************************/
 App.get("/name/:name", (req,res)=>{
-      /*Build function that will change user input to capital first letter so will work with library*/
+      /*Build function that will change user input to capital first letter so will work with library requirements*/
 function capitalizeFirstLetter(string){
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 } 
     let userInput = req.params.name;
     let pName = capitalizeFirstLetter(userInput);
@@ -63,7 +63,6 @@ function capitalizeFirstLetter(string){
 /*********************************/
 /*Code to search Pokemon by name*/
 /*********************************/
-
 
 
 App.listen(port, () =>{
