@@ -1,38 +1,61 @@
 const Express = require('express');
+
+const chalk = require('chalk');
+
+const pokemons = require('json-pokemon')
+const pokemonArray = pokemons;
+const getPokemons = require('json-pokemon/getPokemon');
+
 const App = Express();
 const port = 80;
 
 
 
-App.get("/person/name/:name", (req, res) => {
-
-    let result = {"error": "couldnt find"};
-    people.forEach((value) => {
-        if(value.name == req.params.name){
-            res.send(value);
-        }
-    });
-    res.send(result)
-});
-
-App.get("/person/color/:color", (req, res) => {
-    let result = "Invalid";
-    people.forEach((value) => {
-        if(value.color == req.params.color){
-            console.log(req.path);
+App.get("/name/:name", (req,res)=>{
+     
+    let result = {"error": "Nothing found that matches that. :C"};
+    
+    pokemonArray.forEach((value)=>{
+        if(value.name.toLowerCase() == req.params.name){
             res.send(value);
         }
     });
 
-    if(result.error){
-        console.log(req.path);
+    //console.log(result);
+
+    if (result.error){
+        console.log(chalk.red(req.path));
     }
     else{
-        console.log(req.path);
+        console.log(chalk.green(req.path));
+        console.log(result);
+        // console.log(result);
     }
-    res.send(result);
+    return result;
 });
 
+App.get("/id/:id", (req, res)=>{
+    
+    let result = {"error": "Nothing found that matches that. :C"};
+    
+    pokemonArray.forEach((value)=>{
+        if(value.id == req.params.id){
+            res.send(value);
+        }
+    });
+//debugging
+    //console.log(result);
+
+    if (result.error){
+        console.log(chalk.red(req.path));
+    }
+    else{
+        console.log(chalk.green(req.path));
+        console.log(result);
+        // console.log(result);
+    }
+    return result;
+}); 
 App.listen(port, () =>{
     console.log("Server Running!");
 });
