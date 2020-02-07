@@ -3,7 +3,6 @@ const Express = require('express');
 const chalk = require('chalk');
 
 const pokemons = require('json-pokemon')
-const pokemonArray = pokemons;
 const getPokemons = require('json-pokemon/getPokemon');
 
 const App = Express();
@@ -13,22 +12,17 @@ const port = 80;
 
 App.get("/name/:name", (req,res)=>{
      
-    let result = {"error": "Nothing found that matches that. :C"};
-    
-    pokemonArray.forEach((value)=>{
-        if(value.name.toLowerCase() == req.params.name){
-            res.send(value);
-        }
-    });
-
+let userInput = req.params.name;
+ 
+let pokeObj = getPokemons.getPokemonByName(pokemonName);
     //console.log(result);
 
-    if (result.error){
-        console.log(chalk.red(req.path));
+    if (pokeObj){
+        res.send(pokeObj)
+        console.log(chalk.green(req.path));
     }
     else{
-        console.log(chalk.green(req.path));
-        console.log(result);
+       res.send("That is not a valid name of a pokemon");
         // console.log(result);
     }
     return result;
