@@ -1,15 +1,15 @@
+/* setting up the assets being required in this project*/
 const Express = require('express');
-
 const chalk = require('chalk');
-
 const pokemons = require('json-pokemon')
 const getPokemons = require('json-pokemon/getPokemon');
-
 const App = Express();
 const port = 80;
 
 
-
+/*********************************/
+/*Code to search Pokemon by name*/
+/*********************************/
 App.get("/name/:name", (req,res)=>{
       
     let userInput = req.params.name;
@@ -27,31 +27,28 @@ let pokeObj = getPokemons.getPokemonByName(userInput);
     return result;
 });
 
-/*
+
+/*********************************/
+/*Code to search Pokemon by name*/
+/*********************************/
+
 
 App.get("/id/:id", (req, res)=>{
-    
-    let result = {"error": "Nothing found that matches that. :C"};
-    
-    pokemonArray.forEach((value)=>{
-        if(value.id == req.params.id){
-            res.send(value);
-        }
-    });
-//debugging
-    //console.log(result);
+    /* Use number() found in json-pokemon doccumentation*/
+    let id = req.params.id
+    pokeObj = getPokemons.getPokemonById(Number(id));
 
-    if (result.error){
-        console.log(chalk.red(req.path));
+    if (pokeObj){
+        res.send(pokeObj);
+        console.log(chalk.green(req.path));
     }
     else{
-        console.log(chalk.green(req.path));
-        console.log(result);
-        // console.log(result);
+     res.send("That is not a valid ID of a pokemon.");
+     console.log(chalk.red("That is not a valid ID of a pokemon"));
     }
     return result;
 }); 
-*/
+
 App.listen(port, () =>{
     console.log("Server Running!");
 });
