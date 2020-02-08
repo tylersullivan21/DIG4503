@@ -53,6 +53,27 @@ App.get("/name/:name", (req, res) => {
   }
   res.send(result)
   });
+
+  /*****************/
+  //Playing around with searching for typeList in given api
+  /*****************/
+  App.get("/typeList/:typeList", (req, res) => {
+    let result = { "error" : "That Pokemon does not exist in our records!" };
+    pokeObject.forEach((value) => {
+      if(value.typeList == req.params.typeList) {
+          result = value;
+      }
+    });
+    if(result.error){
+      console.log(chalk.red(req.path));
+  }
+  else{
+    console.log(chalk.green(req.path));
+  }
+  res.send(result)
+  });
+
+
 App.listen(port, () =>{
     console.log("Server is running, Gotta Catch em all Prof Cox!");
 });
