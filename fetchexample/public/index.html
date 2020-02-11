@@ -1,31 +1,29 @@
 <html>
     <body>
+        <h1>Can U Guess the Secret #???</h1>
+        <h3>Hint: 1-9</h3>
         <script>
-            function clicker(){
+            function clicker(event){
 
+                event.preventDefault();
 
-let element = document.getElementById("slap-ass");
+                let element = document.querySelector("input");
+                //console.log(element.value);
 
-event.preventDefault();
+                fetch("/api/" + element.value).then((Response) =>{
+                    return Response.json();
+                }).then((ProcessedResponse) =>{
+                    console.log(ProcessedResponse);
+                });
 
-
-
-            fetch("/api/5" + element.value).then((Response) =>{
-                return Response.json();
+                console.log("clicked!");
             }
-            ).then((ProcessedResponse) =>{
-                console.log(ProcessedResponse);
-            }
+            </script>
 
-            )
-            }
-        </script>
+            <form onsubmit="clicker(event)">
+                <input id = "input" type="text">
+                <button>click Me!</button>
+            </form>
 
-        <form action="">
-            <input id="slap-ass" type="text">
-            <button onSubmit="clicker()">Click me</button>
-        </form>
-
-        <div onClick="clicker()">Press me ugh</div>
     </body>
 </html>

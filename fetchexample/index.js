@@ -2,23 +2,19 @@ const Express = require("express");
 const App = Express();
 const port = 80;
 
-
+App.use(Express.json());
 App.use("/", Express.static("public"));
 
-App.get("/api/:value", (req, res) => {
-
-    let result = {"error": "You done fucked up A-Aron"};
+App.get("/api/:value", (req, res) =>{
+    let result = {"error": "Error Message!"};
 
     if(req.params.value == 5){
-        result = {"secret":"you knew the secret"};
+        result = {"secret": "ur pretty smrt!"};
     }
 
-    else{
-        
-    }
     res.json(result);
 });
 
 App.listen(port, () =>{
-    console.log("server up");
+    console.log("server running!");
 })
