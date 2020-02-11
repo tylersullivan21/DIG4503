@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+            function clicker(){
+
+
+let element = document.getElementById("slap-ass");
+
+event.preventDefault();
+
+
+
+            fetch("/api/5" + element.value).then((Response) =>{
+                return Response.json();
+            }
+            ).then((ProcessedResponse) =>{
+                console.log(ProcessedResponse);
+            }
+
+            )
+            }
+        </script>
+
+        <form action="">
+            <input id="slap-ass" type="text">
+            <button onSubmit="clicker()">Click me</button>
+        </form>
+
+        <div onClick="clicker()">Press me ugh</div>
+    </body>
+</html>
