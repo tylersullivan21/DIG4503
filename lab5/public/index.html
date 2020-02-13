@@ -70,7 +70,7 @@ fetch("/api" + pokemonId.value)
 
 <!--Create 2 html form inputs to check api if name and pokemon id are present-->
 
-<h2>Name</h2>
+<h2>PokemonName</h2>
 <form onsubmit="readName(event)">
 
     <input type="text" id="name">
@@ -78,7 +78,8 @@ fetch("/api" + pokemonId.value)
 
 
 </form>
-
+<hr>
+<h2>PokemonID</h2>
 <form onsubmit="readId(event)">
 
     <input type="text" id="id">
@@ -86,7 +87,8 @@ fetch("/api" + pokemonId.value)
 
 
 </form>
-
+<hr>
+<h2>Reporting Area</h2>
 <div id="reportingArea"></div>
 
 </body>
