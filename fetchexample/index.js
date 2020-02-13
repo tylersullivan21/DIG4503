@@ -2,6 +2,10 @@ const Express = require("express");
 const App = Express();
 const port = 80;
 
+let database = [
+    {number}
+]
+
 App.use(Express.json());
 App.use("/", Express.static("public"));
 
