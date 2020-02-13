@@ -13,7 +13,7 @@
             let pokemonName = document.querySelector("#name");
 
             //need to figure out how to patch api
-            fetch("/api" + pokemonName.value)
+            fetch("/name/:name" + pokemonName.value)
             .then((res) =>{
 
                 return res.json();
