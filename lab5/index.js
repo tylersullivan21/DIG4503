@@ -8,6 +8,11 @@ const App = Express();
 const port = 80;
 
 
+/*********************************/
+//Add static route, using App.use()
+/*********************************/
+
+App.use("/", Express.static("public"));
 
 /*********************************/
 /*Code to search Pokemon by ID*/
