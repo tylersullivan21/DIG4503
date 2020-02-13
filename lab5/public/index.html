@@ -1,0 +1,96 @@
+<html>
+<body>
+    <script>
+
+
+//1)create readName function returns res.json
+//2)Make sure to return res.json
+
+
+        function readName(event){
+
+            event.preventDefault();
+            let pokemonName = document.querySelector("#name");
+
+            //need to figure out how to patch api
+            fetch("/api" + pokemonName.value)
+            .then((res) =>{
+
+                return res.json();
+            })
+            .then((processed) =>{
+
+                let outputArea= document.querySelector("#reportingArea");
+
+
+                if(processed.error){
+                    outputArea.innerHTML = processed.error;
+                }
+                else{
+                    outputArea.innerHTML = processed.pokemonName;
+                }
+            });
+
+        }
+
+
+
+
+
+function readId(event){
+
+event.preventDefault();
+let pokemonId = document.querySelector("#id");
+
+//need to figure out how to patch api
+fetch("/api" + pokemonId.value)
+.then((res) =>{
+
+    return res.json();
+})
+.then((processed) =>{
+
+    let outputArea= document.querySelector("#reportingArea");
+
+
+    if(processed.error){
+        outputArea.innerHTML = processed.error;
+    }
+    else{
+        outputArea.innerHTML = processed.pokemonId;
+    }
+});
+
+}
+
+    </script>
+
+
+
+
+<!--Create 2 html form inputs to check api if name and pokemon id are present-->
+
+<h2>Name</h2>
+<form onsubmit="readName(event)">
+
+    <input type="text" id="name">
+    <button>Submit</button>
+
+
+</form>
+
+<form onsubmit="readId(event)">
+
+    <input type="text" id="id">
+    <button>Submit</button>
+
+
+</form>
+
+<div id="reportingArea"></div>
+
+</body>
+
+
+
+</html>
