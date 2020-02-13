@@ -23,7 +23,7 @@ App.get("/id/:id", (req, res) => {
 pokeObject.forEach((value => {
   if(value.id == req.params.id){
       result = value;
-     
+     console.log("found the result", result);
   }
 }));
 if(result.error){

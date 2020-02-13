@@ -13,7 +13,7 @@
             let pokemonName = document.querySelector("#name");
 
             //need to figure out how to patch api
-            fetch("/name/:name" + pokemonName.value)
+            fetch("/name/" + pokemonName.value)
             .then((res) =>{
 
                 return res.json();
@@ -27,15 +27,14 @@
                     outputArea.innerHTML = processed.error;
                 }
                 else{
-                    outputArea.innerHTML = processed.pokemonName;
+                    /*
+                    outputArea.innerHTML = processed.name + ": "+ processed.id + " : "+ processed.typeList;
+                    */
+                   outputArea.innerHTML = processed.name;
                 }
             });
 
         }
-
-
-
-
 
 function readId(event){
 
@@ -43,7 +42,7 @@ event.preventDefault();
 let pokemonId = document.querySelector("#id");
 
 //need to figure out how to patch api
-fetch("/api" + pokemonId.value)
+fetch("/id/" + pokemonId.value)
 .then((res) =>{
 
     return res.json();
@@ -57,7 +56,7 @@ fetch("/api" + pokemonId.value)
         outputArea.innerHTML = processed.error;
     }
     else{
-        outputArea.innerHTML = processed.pokemonId;
+        outputArea.innerHTML = processed.name;
     }
 });
 
