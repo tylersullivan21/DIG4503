@@ -3,10 +3,22 @@
     <script>
 
 
-//1)create readName function returns res.json
-//2)Make sure to return res.json
+
+/*Create a form element for an ID and include the following:
+A <input> element accepting text input
+A <button> element for submitting the text.
+Form element should have a onSubmit event listener and call a function
+Create a form element for a NAME and include the following:
+A <input> element accepting text input
+A <button> element for submitting the text.
+Form element should have a onSubmit event listener and call a function
+Create a reporting area (<div>) that should update with the response from the server:
+If an error object is returned, it should display its value
+If a Pokemon object is returned, it should show the name of the Pokemon 
+*/
 
 
+//Create function that Create a function to be called when the user clicks on the <button> in the ID form, uses fetch(), and updates the reporting area
         function readName(event){
 
             event.preventDefault();
@@ -35,6 +47,8 @@
             });
 
         }
+
+     //Create a function to be called when the user clicks on the <button> in the NAME form, uses fetch(), and updates the reporting area
 
 function readId(event){
 
