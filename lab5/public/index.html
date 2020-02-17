@@ -20,14 +20,11 @@ If a Pokemon object is returned, it should show the name of the Pokemon
 
 //Create function that Create a function to be called when the user clicks on the <button> in the ID form, uses fetch(), and updates the reporting area
         function readName(event){
-
             event.preventDefault();
             let pokemonName = document.querySelector("#name");
-
             //need to figure out how to patch api
             fetch("/name/" + pokemonName.value)
             .then((res) =>{
-
                 return res.json();
             })
             .then((processed) =>{
@@ -47,34 +44,36 @@ If a Pokemon object is returned, it should show the name of the Pokemon
             });
 
         }
-
      //Create a function to be called when the user clicks on the <button> in the NAME form, uses fetch(), and updates the reporting area
 
-function readId(event){
+                function readId(event){
 
-event.preventDefault();
-let pokemonId = document.querySelector("#id");
+                    event.preventDefault();
+                    let pokemonId = document.querySelector("#id");
 
-//need to figure out how to patch api
-fetch("/id/" + pokemonId.value)
-.then((res) =>{
+    //need to figure out how to patch api
+                    fetch("/id/" + pokemonId.value)
+                    .then((res) =>{
 
-    return res.json();
-})
-.then((processed) =>{
+                    return res.json();
+                    })
+                .then((processed) =>{
 
-    let outputArea= document.querySelector("#reportingArea");
+                     let outputArea= document.querySelector("#reportingArea");
 
 
-    if(processed.error){
-        outputArea.innerHTML = processed.error;
+                    if(processed.error){
+                        outputArea.innerHTML = processed.error;
+                    }
+                    else{
+                        outputArea.innerHTML = processed.name;
+                        /*
+                                    outputArea.innerHTML = processed.id+ ": "+ processed.name + " : "+ processed.typeList;
+                                    */
+                    }
+             });
+
     }
-    else{
-        outputArea.innerHTML = processed.name;
-    }
-});
-
-}
 
     </script>
 
@@ -88,7 +87,6 @@ fetch("/id/" + pokemonId.value)
 
     <input placeholder="Enter pokemon name" type="text" id="name">
     <button>Submit</button>
-
 
 </form>
 <hr>
