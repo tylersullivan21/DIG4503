@@ -4,11 +4,11 @@ import React from 'react';
 class NameSearch extends React.Component{
 
     //Create function that Create a function to be called when the user clicks on the <button> in the ID form, uses fetch(), and updates the reporting area
-    readName(){
-      
+    readName(event){
+        event.preventDefault();
         let pokemonName = document.querySelector("#name");
         //need to figure out how to patch api
-        fetch("/name/:name" + pokemonName.value)
+        fetch("http://localhost:80/name/" + pokemonName.value)
         .then((res) =>{
             return res.json();
         })

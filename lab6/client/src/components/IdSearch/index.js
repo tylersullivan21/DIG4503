@@ -2,13 +2,14 @@ import React from 'react';
 
 class IdSearch extends React.Component{
 
- readId(){
+ readId(event){
+    event.preventDefault();
 
-    
+
         let pokemonId = document.querySelector("#id");
 
 //need to figure out how to patch api
-        fetch("/id/" + pokemonId.value)
+        fetch("http://localhost:80/id/" + pokemonId.value)
         .then((res) =>{
 
         return res.json();

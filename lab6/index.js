@@ -6,7 +6,8 @@ const pokeObject = pokemons;
 const getPokemons = require('json-pokemon/getPokemon');
 const App = Express();
 const port = 80;
-
+const cors = require("cors");
+App.use(cors());
 
 /*********************************/
 //Add static route, using App.use()
