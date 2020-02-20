@@ -8,7 +8,7 @@ class NameSearch extends React.Component{
         event.preventDefault();
         let pokemonName = document.querySelector("#name");
         //need to figure out how to patch api
-        fetch("http://localhost:80/name/" + pokemonName.value)
+        fetch("http://localhost:80/name/" + pokemonName.value.toLowerCase())
         .then((res) =>{
             return res.json();
         })
