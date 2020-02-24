@@ -4,9 +4,6 @@ const URl = "mongodb+srv://<jamessullivan>:<NXa6AwWqCvtcsxsq>@cluster0-tc9sb.mon
 
 MongoClient.connect(URL, function(error, connection) {
 
-
-
-
 if (error){
     throw error;
 }
@@ -23,7 +20,6 @@ console.log(result)
 });
 
 console.log(result);
-
 
 connection.close();
 
