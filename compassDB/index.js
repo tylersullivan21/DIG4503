@@ -5,7 +5,7 @@ const port = 80;
 
 const MonogDB = require('');
 const mongoDBClient = MongoDB.MongoClient;
-const URL = "";
+const URL = "mongodb+srv://jamessullivan:NXa6AwWqCvtcsxsq@cluster0-tc9sb.mongodb.net/";
 
 
 let collection = null;
@@ -31,7 +31,7 @@ App.get("movies/title/:title", (req,res) => {
     let result = {"error": "Could not find movies!"};
 
 if(collection != null){
-    collection.find();
+    collection.find({"title": `/${req.params.title}/`});
 }
 
     res.json(result);
