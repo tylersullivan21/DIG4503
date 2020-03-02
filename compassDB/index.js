@@ -31,10 +31,23 @@ App.get("movies/title/:title", (req,res) => {
     let result = {"error": "Could not find movies!"};
 
 if(collection != null){
-    collection.find({"title": `/${req.params.title}/`});
+    collection.find({"title": `/${req.params.title}/`}).toArray()
+    .limit(100)
+    .toArray()
+    .then((cursorArray) => {
+
+        if(cursorArray.length != 0){
+            result = cursorArray;
+        }
+      // Do something with the cursorArray data
+      res.json(result);
+    });;
+}
+else{
+    res.json(result);
 }
 
-    res.json(result);
+    
 
 })
 
