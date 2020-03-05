@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.js",
+    "client-start": "cd client && npm run start",
+    "start": "concurrently 'npm:server' 'npm:client-start'"
   },
   "keywords": [],
   "author": "",
