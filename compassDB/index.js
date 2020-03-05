@@ -6,14 +6,13 @@ const port = 80;
 const MonogDB = require('');
 const mongoDBClient = MongoDB.MongoClient;
 const URL = "mongodb+srv://jamessullivan:NXa6AwWqCvtcsxsq@cluster0-tc9sb.mongodb.net/";
-
-
 let collection = null;
 
 MongoClient.connect(URL, (error, connection) => {
 if(error){
     throw error;
 }
+
 
 connection.db("DIG4503-78");
 collection = database.collection("Movies");
@@ -22,9 +21,6 @@ collection = database.collection("Movies");
 
 const CORS = require('cors');
 App.use(CORS());
-
-
-App.listen(port, () => {
 
 App.get("movies/title/:title", (req,res) => {
 
@@ -47,9 +43,8 @@ else{
     res.json(result);
 }
 
-    
-
 })
 
-
+App.listen(port, () => {
+    console.log("say beep");
 });

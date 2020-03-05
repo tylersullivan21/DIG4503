@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": " nodemon index.js",
+    "client": "cd client"
     "start": ""
   },
   "keywords": [],
