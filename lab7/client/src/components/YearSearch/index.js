@@ -17,8 +17,16 @@ class YearSearch extends React.Component {
         fetch("http://localhost:80/movies/year/" + year)
         .then((res) => { return res.json() })
         .then((processed) => {
-            // Call the callback function given to the class component
-            this.props.callback(processed);
+            // Call the callback function given to the class component        
+
+  /*          if (processed.error){
+
+              console.log(processed.error);
+             
+            }
+            else{*/
+                this.props.callback(processed);
+           // }
         });
 
     }
@@ -32,6 +40,8 @@ class YearSearch extends React.Component {
                     id="yearSearch" 
                     onKeyUp={this.yearSearchFormSubmit} 
                 />
+
+
             </div>
         );
     }

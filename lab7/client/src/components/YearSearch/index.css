@@ -18,5 +18,5 @@ table {
   color: white;
   }
   tr:nth-child(even) {background-color: magenta;}
-  tr:nth-child(odd) {background-color: cyan;}
+  tr:nth-child(odd) {background-color: limegreen;}
   

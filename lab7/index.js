@@ -56,6 +56,8 @@ App.get("/movies/year/:year", (req,res)=>{
         }
         res.json(result);
     });
+ 
+
 });
 
 // Listen on 'port'
