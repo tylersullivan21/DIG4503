@@ -1,5 +1,3 @@
-import React from 'react';
-
 class IdSearch extends React.Component{
 
  readId(event){
@@ -9,7 +7,7 @@ class IdSearch extends React.Component{
         let pokemonId = document.querySelector("#id");
 
 //need to figure out how to patch api
-        fetch("http://localhost:80/id/" + pokemonId.value)
+        fetch("api/pokemon/id/" + pokemonId.value)
         .then((res) =>{
 
         return res.json();
