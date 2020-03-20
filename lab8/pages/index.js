@@ -4,8 +4,6 @@ import IdSearch from "../components/IdSearch/index";
 
 
 const Home = () =>{
-
-
 return(
 
   <div>
@@ -16,7 +14,5 @@ return(
   </div>
 
 )
-
 }
-
 export default Home;

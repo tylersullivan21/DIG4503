@@ -6,9 +6,6 @@ return(
 
 )
 
-
-
-
 }
 
 export default Home;
