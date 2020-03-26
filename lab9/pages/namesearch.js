@@ -12,9 +12,9 @@ return(
          <Head>
         <title>This is the Name Search page!</title>
       </Head>
-    <IdSearch />
+  
   <NameSearch />
-  <TypeSearch />
+
     <h2>Reporting</h2>
     <div id="reportingArea"></div>
   </div>

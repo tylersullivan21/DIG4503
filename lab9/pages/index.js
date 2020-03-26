@@ -1,28 +1,31 @@
 import NameSearch from "../components/NameSearch/index";
 import IdSearch from "../components/IdSearch/index";
-import TypeSearch from "../components/TypeSearch";
+
 
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 const Home = () =>{
 return(
 
-  <div>
-         <Head>
-        <title>This is the home page!</title>
-      </Head>
-    <IdSearch />
-  <NameSearch />
-  <TypeSearch />
+<div>
+<div>
+  <Head>
+<title>This is a test title</title>
+    </Head>
+          <p>Test</p>
 
- 
-    <h2>Reporting</h2>
-    <div id="reportingArea"></div>
+          <Link href="/namesearch">
+          <a>name search</a>
+          </Link>
+<br>
+</br>
+          <Link href="/idsearch">
+          <a>id search</a>
+          </Link>
 
-    <Link href="/namesearch">
-          <a>Name Search</a>
-        </Link>
+          </div>
   </div>
 
 )
