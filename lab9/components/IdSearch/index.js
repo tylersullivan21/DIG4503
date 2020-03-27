@@ -1,4 +1,4 @@
-import styles from"./IdSearch/IdSearch.module.css";
+import styles from"./IdSearch.module.css";
 
 class IdSearch extends React.Component{
 
