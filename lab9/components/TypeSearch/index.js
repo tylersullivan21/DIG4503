@@ -1,5 +1,5 @@
+import styles from"./TypeSearch.module.css";
 class TypeSearch extends React.Component{
-
     readId(event){
        event.preventDefault();
    
@@ -33,11 +33,13 @@ class TypeSearch extends React.Component{
    render() {
        return(
            <div>
+               <body className={styles.background}>
                 <h2>Pokemon Type</h2>
                 <form onSubmit={this.readType}>
                    <input id="type" type="text" />
                    <button>Submit</button>
                </form>
+               </body>
            </div>
        );
    }

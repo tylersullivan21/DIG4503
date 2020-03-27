@@ -1,6 +1,4 @@
-import React from 'react';
-
-
+import styles from"./NameSearch.module.css";
 class NameSearch extends React.Component{
 
     //Create function that Create a function to be called when the user clicks on the <button> in the ID form, uses fetch(), and updates the reporting area
@@ -32,11 +30,13 @@ class NameSearch extends React.Component{
     render() {
         return(
             <div>
+                <body className={styles.background}>
                  <h2>Name</h2>
                  <form onSubmit={this.readName}>
                     <input id="name" type="text" />
                     <button>Submit</button>
                 </form>
+                </body>
             </div>
         );
     }
