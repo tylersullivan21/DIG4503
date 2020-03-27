@@ -15,6 +15,7 @@ class App extends React.Component {
     // (This is called from YearSearch.)
     setResultsTable = (processed) => {
       this.setState({"table": processed});
+      console.log(processed);
     }
   
     // Render the results table

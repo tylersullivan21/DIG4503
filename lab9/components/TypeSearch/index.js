@@ -1,7 +1,7 @@
 /*import styles from"./TypeSearch.module.css";*/
 class TypeSearch extends React.Component{
-    readType = () => {
-    
+    readType = (event) => {
+     event.preventDefault();
            let pokemonType = document.querySelector("#type");
    
    //need to figure out how to patch api
