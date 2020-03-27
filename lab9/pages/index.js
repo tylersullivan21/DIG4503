@@ -25,6 +25,10 @@ return(
           <a>id search</a>
           </Link>
 
+          <Link href="/typesearch">
+          <a>type search</a>
+          </Link>
+
           </div>
   </div>
 
