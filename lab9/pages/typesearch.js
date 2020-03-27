@@ -9,7 +9,6 @@ class App extends React.Component {
       this.state = {
         "table": []
       };
-  
     }
   
     // Update the internal state.table
@@ -20,7 +19,6 @@ class App extends React.Component {
   
     // Render the results table
     createResultsTable() {
-  
       return (
             <div>
         <Head>
@@ -32,6 +30,7 @@ class App extends React.Component {
             this.state.table.map((entry, index) => {
                return( 
                 <tr key={index}>
+                  <td>{entry.name}</td>
                   <td>{entry.type}</td>
                 </tr>
                );

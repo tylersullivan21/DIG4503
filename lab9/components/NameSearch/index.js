@@ -30,13 +30,13 @@ class NameSearch extends React.Component{
     render() {
         return(
             <div>
-                <body className={styles.background}>
+                <div className={styles.background}>
                  <h2>Name</h2>
                  <form onSubmit={this.readName}>
                     <input id="name" type="text" />
                     <button>Submit</button>
                 </form>
-                </body>
+                </div>
             </div>
         );
     }
