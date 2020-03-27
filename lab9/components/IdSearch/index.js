@@ -1,3 +1,5 @@
+import styles from"./IdSearch/IdSearch.module.css";
+
 class IdSearch extends React.Component{
 
     readId(event){
@@ -33,7 +35,7 @@ class IdSearch extends React.Component{
    render() {
        return(
            <div>
-                <h2>id</h2>
+                <h2 className={styles.background}>id</h2>
                 <form onSubmit={this.readId}>
                    <input id="id" type="text" />
                    <button>Submit</button>

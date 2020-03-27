@@ -9,7 +9,7 @@ for(let i=0; i< pokemon.length; i++) {
 
     for(let k=0; k < pokemon[i].typeList.length; k++){
         
-        if(pokemon[i].typeList[k] == req.params.type){
+        if(pokemon[i].typeList[k] == req.query.type){
             result.push(pokemon[i])
         }
 console.log(pokemon[i])
