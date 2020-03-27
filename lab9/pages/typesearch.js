@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-
-import TypeSearch from "../components/TypeSearch/index";
+import TypeSearch from "../components/TypeSearch";
 class App extends React.Component {
 
     constructor(props) {
