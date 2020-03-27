@@ -33,8 +33,7 @@ class App extends React.Component {
             this.state.table.map((entry, index) => {
                return( 
                 <tr key={index}>
-                  <td>{entry.name}</td>
-                  <td>{entry.id}</td>
+                  <td>{entry.type}</td>
                 </tr>
                );
             })
