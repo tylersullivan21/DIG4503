@@ -14,10 +14,11 @@ export default  (req,res) => {
                 result.push(pokemon[i]);
               
             } 
+           
         }
 
     }
-    console.log(result);
+  /*  console.log(result);*/
   res.json(result);
   
 }

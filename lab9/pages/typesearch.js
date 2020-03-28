@@ -25,12 +25,21 @@ class App extends React.Component {
         <Head>
         <title>This is the Type Search page!</title>
       </Head>
+      <Link href="/namesearch">
+          <a>name search</a>
+          </Link>
+<br>
+</br>
+          <Link href="/idsearch">
+          <a>id search</a>
+          </Link>
         <table>
           <tbody>
           {
             this.state.table.map((entry, index) => {
                return( 
                 <tr key={index}>
+                        <td>{entry.id}</td>
                   <td>{entry.name}</td>
                   <td>{entry.type}</td>
                 </tr>

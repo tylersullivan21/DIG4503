@@ -3,7 +3,7 @@ import IdSearch from "../components/IdSearch/index";
 import TypeSearch from "../components/TypeSearch";
 
 import Head from 'next/head';
-
+import Link from 'next/link';
 
 const Home = () =>{
 return(
@@ -12,6 +12,15 @@ return(
          <Head>
         <title>This is the Name Search page!</title>
       </Head>
+      <Link href="/namesearch">
+          <a>id search</a>
+          </Link>
+<br>
+</br>
+<Link href="/typesearch">
+          <a>type search</a>
+          </Link>
+       
   
   <IdSearch />
 
