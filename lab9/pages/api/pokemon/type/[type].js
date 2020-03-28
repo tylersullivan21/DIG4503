@@ -18,7 +18,6 @@ export default  (req,res) => {
 
     }  
   /*  console.log(result);*/
-  
   res.json(result);
   
 }
