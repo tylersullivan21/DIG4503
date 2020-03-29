@@ -14,12 +14,17 @@ export default  (req,res) => {
                 result.push(pokemon[i]);
               
             } 
+            else{
+                
+            }
         }
 
     }  
 
   /*  console.log(result);*/
-    if(pokemon !== type) {
+  /* figured out how to make table work, need to figure out how to display error*/
+  /*googled that two res.json() cannot be sent together at the same time*/
+    if(pokemon == type) {
         result = type;
     }
 
