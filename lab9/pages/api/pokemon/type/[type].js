@@ -3,7 +3,7 @@ import pokemon from 'json-pokemon';
 export default  (req,res) => {
 
     let result = [{"error": "Could not find pokemon type."}];
-    
+  
     let type = req.query.type;
 
     for(let i = 0; i < pokemon.length; i++) {
@@ -17,9 +17,14 @@ export default  (req,res) => {
         }
 
     }  
+
   /*  console.log(result);*/
-  res.json(result);
-  
+    if(pokemon !== type) {
+        result = type;
+    }
+
+    res.json(result);
+
 }
 
 
