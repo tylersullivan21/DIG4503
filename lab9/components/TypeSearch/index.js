@@ -7,7 +7,7 @@ class TypeSearch extends React.Component{
            let pokemonType = document.querySelector("#type");
    
    //need to figure out how to patch api
-           fetch("http://localhost:3000/api/pokemon/type/" + pokemonType.value)
+           fetch("/api/pokemon/type/" + pokemonType.value)
            .then((res) =>{
            return res.json();
            })
