@@ -32,7 +32,7 @@ class NameSearch extends React.Component{
             <div>
                 <div className={styles.background}>
                  <h2 className={styles.head}>Search a pokemon by name!</h2>
-                 <form onSubmit={this.readName}>
+                 <form className={styles.form} onSubmit={this.readName}>
                  <input className={styles.input} id="name" type="text" />
                    <br></br>
                    <button className={styles.submit}>Submit</button>

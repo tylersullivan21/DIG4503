@@ -15,7 +15,7 @@
 }
 
 .background{
-    background-color: pink;
+    background-color: Cyan;
     margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .reportarea{
-    background-color: aquamarine;
+    background-color: Magenta;
     padding: 10%;
     text-transform: uppercase;
 }
