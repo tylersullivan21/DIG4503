@@ -1,5 +1,35 @@
 .background{
-    background-color: magenta;
+    background-color: pink;
     margin: 0 auto;
 }
 
+.reporting{
+    font-size: 45px;
+    text-align: center;
+}
+
+.reportarea{
+    background-color: aquamarine;
+    padding: 10%;
+    text-transform: uppercase;
+}
+
+.head{
+    font-size: 50px;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+    
+}
+
+.input{
+    padding: .4%;
+}
+
+.submit{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding: .4%;
+}

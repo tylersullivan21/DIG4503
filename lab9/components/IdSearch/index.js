@@ -36,10 +36,11 @@ class IdSearch extends React.Component{
        return(
            <div>
                <div className={styles.background}>
-                <h2 >id</h2>
+                <h2 className={styles.head}>Search Pokemon By Id Number</h2>
                 <form className={styles.form} onSubmit={this.readId}>
-                   <input id="id" type="text" />
-                   <button>Submit</button>
+                   <input className={styles.input} id="id" type="text" />
+                   <br></br>
+                   <button className={styles.submit}>Submit</button>
                </form>
                </div>
            </div>

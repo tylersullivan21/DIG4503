@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import TypeSearch from "../components/TypeSearch";
+import styles from"../components/TypeSearch/TypeSearch.module.css";
 class App extends React.Component {
 
     constructor(props) {
@@ -21,7 +22,7 @@ class App extends React.Component {
     // Render the results table
     createResultsTable() {
       return (
-            <div>
+            <div >
         <Head>
         <title>This is the Type Search page!</title>
       </Head>
@@ -33,14 +34,14 @@ class App extends React.Component {
           <Link href="/idsearch">
           <a>id search</a>
           </Link>
-        <table>
-          <tbody>
+        <table className={styles.container}>
+          <tbody className={styles.table}>
           {
             this.state.table.map((entry, index) => {
                return( 
                 <tr key={index}>
-                        <td>{entry.id}</td>
-                  <td>{entry.name}</td>
+                        <td className={styles.idtext}>{entry.id}</td>
+                  <td className={styles.nametext}>{entry.name}</td>
                   <td>{entry.type}</td>
                 </tr>
                );
@@ -54,8 +55,8 @@ class App extends React.Component {
     }
     render() {
         return (
-          <div>
-            <TypeSearch callback={this.setResultsTable} />
+          <div className={styles.container}>
+            <TypeSearch  callback={this.setResultsTable} />
             {this.createResultsTable()}
           </div>
         );

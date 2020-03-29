@@ -31,10 +31,11 @@ class NameSearch extends React.Component{
         return(
             <div>
                 <div className={styles.background}>
-                 <h2>Name</h2>
+                 <h2 className={styles.head}>Search a pokemon by name!</h2>
                  <form onSubmit={this.readName}>
-                    <input id="name" type="text" />
-                    <button>Submit</button>
+                 <input className={styles.input} id="name" type="text" />
+                   <br></br>
+                   <button className={styles.submit}>Submit</button>
                 </form>
                 </div>
             </div>

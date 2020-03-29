@@ -1,5 +1,20 @@
-.background{
-    background-color: orange;
+.container{
+   text-align: center ;
+
+   
+}
+.table{
+    background-color: magenta;
     margin: 0 auto;
+   
+}
+.idtext{
+    color: cyan;
+    font-size: 38px;
+}
+
+.nametext{
+    color:white;
+    font-size: 38px;
 }
 
