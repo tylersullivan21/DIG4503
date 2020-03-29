@@ -12,14 +12,14 @@ return(
          <Head>
         <title>This is the Name Search page!</title>
       </Head>
+      <div className={styles.nav}>
       <Link href="/namesearch">
-          <a>Name search</a>
+      <button><a className={styles.rightlink} >name search</a></button>
           </Link>
-<br>
-</br>
-<Link href="/typesearch">
-          <a>type search</a>
+          <Link href="/typesearch">
+          <button><a className={styles.rightlink} >type search</a></button>
           </Link>
+          </div>     
        
   
   <IdSearch />

@@ -12,16 +12,17 @@ return(
          <Head>
         <title>This is the Name Search page!</title>
       </Head>
-      <div>
+     
+
+        <div className={styles.nav}>
       <Link href="/idsearch">
-          <a className={styles.links}>id search</a>
+      <button><a className={styles.rightlink} >id search</a></button>
           </Link>
-<br></br>
-<Link href="/typesearch">
-          <a className={styles.links}>type search</a>
+          <Link href="/typesearch">
+          <button><a className={styles.rightlink} >type search</a></button>
           </Link>
-       
-          </div>
+          </div>     
+        
   <NameSearch />
 
   <div className={styles.reportarea} >

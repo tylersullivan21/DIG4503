@@ -33,3 +33,23 @@
     margin-bottom: 2%;
     padding: .4%;
 }
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "leftlink rightlink";
+}
+
+.leftlink{
+    grid-area: leftlink;
+    font-size: 25px;
+    font-weight: 500px;
+    justify-self: center;
+}
+
+.rightlink{
+    grid-area: rightlink;
+    font-size: 25px;
+    font-weight: 500px;
+    justify-self: center;
+}
