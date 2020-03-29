@@ -1,4 +1,6 @@
 /*import styles from"./TypeSearch.module.css";*/
+import styles from"./TypeSearch.module.css";
+import Link from "next/link"
 class TypeSearch extends React.Component{
     readType = (event) => {
      event.preventDefault();
@@ -19,11 +21,18 @@ class TypeSearch extends React.Component{
    render() {
        return(
            <div>
-             
-                <h2>Pokemon Type</h2>
+                 <div className={styles.nav}>
+      <Link href="/idsearch">
+      <button><a className={styles.rightlink} >id search</a></button>
+          </Link>
+          <Link href="/namesearch">
+          <button><a className={styles.rightlink} >name search</a></button>
+          </Link>
+          </div>
+                <h2>Search for Pokemon by type!</h2>
                 <form >
                    <input id="type" type="text" />
-                   <button onClick={this.readType}>Submit</button>
+                   <br></br>                   <button onClick={this.readType}>Submit</button>
                </form>
              
            </div>

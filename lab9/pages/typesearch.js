@@ -26,14 +26,9 @@ class App extends React.Component {
         <Head>
         <title>This is the Type Search page!</title>
       </Head>
-      <div className={styles.nav}>
-      <Link href="/idsearch">
-      <button><a className={styles.rightlink} >id search</a></button>
-          </Link>
-          <Link href="/namesearch">
-          <button><a className={styles.rightlink} >name search</a></button>
-          </Link>
-          </div>     
+
+  
+
         <table className={styles.container}>
           <tbody className={styles.table}>
           {
