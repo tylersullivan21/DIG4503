@@ -1,0 +1,30 @@
+.navcontainer{
+    display:grid;
+    grid-template-areas:
+    "left center right";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.left{
+    grid-area: left;
+  
+}
+
+.center{
+    grid-area: center;
+}
+
+.right{
+    grid-area: right;
+}
+
+.para{
+    text-align: center;
+    font-size: 24px;
+}
+
+.button{
+    padding: 2%;
+    font-size: 18px;
+    background-color: beige;
+}
