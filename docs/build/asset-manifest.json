@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/DIG4503/static/css/main.def076de.chunk.css",
+    "main.js": "/DIG4503/static/js/main.1f88916c.chunk.js",
+    "main.js.map": "/DIG4503/static/js/main.1f88916c.chunk.js.map",
+    "runtime-main.js": "/DIG4503/static/js/runtime-main.3ee54727.js",
+    "runtime-main.js.map": "/DIG4503/static/js/runtime-main.3ee54727.js.map",
+    "static/css/2.de424728.chunk.css": "/DIG4503/static/css/2.de424728.chunk.css",
+    "static/js/2.7a6c14f8.chunk.js": "/DIG4503/static/js/2.7a6c14f8.chunk.js",
+    "static/js/2.7a6c14f8.chunk.js.map": "/DIG4503/static/js/2.7a6c14f8.chunk.js.map",
+    "index.html": "/DIG4503/index.html",
+    "precache-manifest.da32b670e046f5381fdd91b9815368f9.js": "/DIG4503/precache-manifest.da32b670e046f5381fdd91b9815368f9.js",
+    "service-worker.js": "/DIG4503/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/DIG4503/static/css/2.de424728.chunk.css.map",
+    "static/css/main.def076de.chunk.css.map": "/DIG4503/static/css/main.def076de.chunk.css.map",
+    "static/js/2.7a6c14f8.chunk.js.LICENSE.txt": "/DIG4503/static/js/2.7a6c14f8.chunk.js.LICENSE.txt",
+    "static/media/hero.css": "/DIG4503/static/media/asa-2-overlay.c5b85879.jpg",
+    "static/media/headshot-square.jpg": "/DIG4503/static/media/headshot-square.4460088f.jpg",
+    "static/media/tyler-resume-revised.pdf": "/DIG4503/static/media/tyler-resume-revised.5828c36d.pdf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ee54727.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.7a6c14f8.chunk.js",
+    "static/css/main.def076de.chunk.css",
+    "static/js/main.1f88916c.chunk.js"
+  ]
+}
