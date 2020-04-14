@@ -1,0 +1,35 @@
+.services-head{
+        padding-bottom: .5em;
+    font-size: 1.35rem;
+  }
+  .services-text{
+    font-size: 18px;
+    line-height:2.5rem;
+  }
+  .jumbotron{
+    margin-bottom: 0;
+    padding: 13% auto!important;
+    border-radius: 0!important;
+  }
+
+  .left{
+    border-right: 2px solid #8bc53f;
+    padding-right: 8% !important;
+  }
+  .right{
+    border-left: 2px solid #8bc53f;
+    padding-left: 8% !important;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .left{
+        border-right: none;
+        padding-right: 0!important;
+      }
+      .right{
+        border-left: none;
+        padding-left: 0!important;
+      }
+  }

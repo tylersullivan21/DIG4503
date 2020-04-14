@@ -1,0 +1,33 @@
+
+/* NAV CSS*/
+.tyler-logo{
+    width: 55px;
+    height: 55px;
+  }
+  
+  .navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background-color: rgb(0,0,0, 0.6)!important;
+  }
+  .navbar-brand img{
+    width: 45px;
+    height: 45px;
+  }
+  .navbar-nav li{
+    padding-right: 0.5rem;
+  }
+  .navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+    padding-top: .8rem;
+  }
+  .navbar-dark .navbar-nav .nav-link.active,
+  .navbar-dark .navbar-nav .nav-link:hover{
+   color: #8bc53f;
+  }
+  /* NAV CSS*/
+  .nav-link{
+    font-size: 12px;
+  }

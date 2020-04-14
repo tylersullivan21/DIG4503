@@ -1,0 +1,44 @@
+
+.resume-section{
+    background-color: #40474e;
+  }
+  .resume-text{
+    text-align: center;
+    color: white;
+    
+  }
+  
+  .resume-btn{
+    
+      background: #8bc53f;
+      color: white;
+      padding: 1%;
+      border-radius: 30px;
+      text-align: center;
+      /* width: 20%; */
+      justify-self: center;
+  
+  }
+  
+  .resume-container{
+    display: grid;
+    grid-template-areas:
+    "resume-text"
+    "resume-btn";
+  }
+  .resume-text{
+    grid-area: resume-text;
+  }
+  .resume-btn{
+    grid-area: resume-btn;
+    width: 18%;
+    justify-self: center;
+  margin-top: 2%;
+  background: #8bc53f;
+  border: none;
+  }
+  /*
+  .resume-btn:hover{
+    background-color: magenta;
+  }*/
+  
