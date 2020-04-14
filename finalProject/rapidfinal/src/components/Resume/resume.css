@@ -1,6 +1,7 @@
 
 .resume-section{
     background-color: #40474e;
+    padding: 4% 0;
   }
   .resume-text{
     text-align: center;
@@ -42,3 +43,10 @@
     background-color: magenta;
   }*/
   
+
+
+  @media only screen and (max-width: 600px) {
+   .resume-btn{
+     width:40%;
+   }
+  }

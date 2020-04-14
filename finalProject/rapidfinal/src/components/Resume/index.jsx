@@ -10,7 +10,7 @@ render(){
 return(
 
 
-<div class="jumbotron resume-section">
+<div class=" resume-section">
 		<div class="narrow">
 			<div class="resume-container">
 <h3 class="resume-text">Click the button below to view my resume!</h3>

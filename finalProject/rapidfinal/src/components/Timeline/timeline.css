@@ -18,6 +18,10 @@ header h1{
    margin-bottom: 0;
  }
 
+ #experience {
+  padding: 7% 2%;
+ }
+
 .hexa{
   border: 0px;
   float: left;

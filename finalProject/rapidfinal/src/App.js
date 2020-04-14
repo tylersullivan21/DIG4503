@@ -5,7 +5,6 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -13,7 +12,6 @@ import About from './components/About'
 import Resume from './components/Resume'
 import Timeline from './components/Timeline'
 import Skills from './components/Skills'
-import Projects from './components/Projects'
 class HomePage extends React.Component{
 
   render(){
@@ -29,6 +27,7 @@ class HomePage extends React.Component{
 <Timeline />
 <Footer/>
 </div>
+
 </React.Fragment>
     )
   }
