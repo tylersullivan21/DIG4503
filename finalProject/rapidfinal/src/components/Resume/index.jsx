@@ -16,7 +16,7 @@ return(
 <h3 class="resume-text">Click the button below to view my resume!</h3>
 
 
-<a class="resume-btn" target="_blank"href={ResumePDF}>Download PDF</a>
+<a class="resume-btn" target="_blank"href={ResumePDF}>View Resume</a>
 			</div>
 
 		</div>
