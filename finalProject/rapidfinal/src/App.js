@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../src/main.css'
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import About from './components/About'
+import Resume from './components/Resume'
+import Timeline from './components/Timeline'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+class HomePage extends React.Component{
+
+  render(){
+    return(
+     
+<React.Fragment>
+<div id="home" class="offset">
+<Navbar />
+<Hero />
+<About />
+<Skills />
+<Resume />
+<Timeline />
+<Footer/>
+</div>
+</React.Fragment>
+    )
+  }
 }
 
-export default App;
+export default HomePage;
