@@ -10,7 +10,8 @@
   }
   .me-text{
     grid-area: me-text;
-    line-height: 3rem;
+    line-height: 3.5rem;
+    font-size: 18px;
   }
   
 
@@ -33,16 +34,10 @@
   max-width: 400px;
   
   }
-  .me{
-    max-width: 350px;
-  }
-  
-  
-  .me-text{
-    padding-top: 7%;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
+  .me {
+    max-width: 300px;
+    margin-left: 10%;
+}
   
   .about-text{
     padding-right: 9%;
@@ -62,7 +57,7 @@
     grid-template-columns:  1fr;
     }
   
-    .me, {
+    .me {
         max-width: 250px!important;
     }
    
@@ -86,19 +81,8 @@
   }
    .headshot{
     width: 100%;
-    border-radius: 200px;
-  max-width: 400px;
+  max-width: 300px;
   
-  }
-  .me{
-    max-width: 350px;
-  }
-  
-  
-  .me-text{
-    padding-top: 7%;
-    padding-left: 4%;
-    padding-right: 4%;
   }
   
   .about-text{
