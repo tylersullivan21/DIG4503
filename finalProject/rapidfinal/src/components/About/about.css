@@ -21,7 +21,7 @@
   }
   #about{
     padding-top: 7%;
-      padding-bottom: 13%;
+    padding-bottom: 13%;
    
   }
   .about-head h3{
@@ -30,8 +30,7 @@
 
   .headshot{
     width: 100%;
-  
-  max-width: 400px;
+    max-width: 400px;
   
   }
   .me {
@@ -59,7 +58,19 @@
   
     .me {
         max-width: 250px!important;
+        margin-left: 0;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        border-radius: 200px;
     }
+
+    .me-text{
+      padding: 0 3%;
+      font-size: 14px;
+      line-height: 3rem;
+      margin-top: 4%;
+    }
+
    
   }
   
